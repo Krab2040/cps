@@ -1,16 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
-  </body>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>cps сервис</title>
+</head>
+<body>
+<header class="header">
+  <div class="header-buttons">
+    <button class="button button--burger"></button>
+    <div class="header-separator header-separator--logo"></div>
+    <a href="#"><img class="header-buttons__logo" src="./img/cps.svg" alt="логотип cos"></a>
+  </div>
+  <div class="header-buttons">
+    <button class="button button-tablet button--call"></button>
+    <button class="button button-tablet button--chat"></button>
+    <button class="button button-tablet button--profile"></button>
+    <div class="header-separator"></div>
+    <button class="button button--repair"></button>
+    <button class="button button--checkstatus"></button>
+  </div>
+</header>
+<main>
+  <div class="title">
+    <div class="title-main">
+      <h1 class="title-main__text">Услуги и сервисы</h1>
+    </div>
+    <div class="title-buttons-container">
+      <button class="title-button">
+        <span class="title-button--text">Оставить заявку</span>
+        <div class="button button--repair"></div>
+      </button>
+
+      <button class="title-button">
+        <span class="title-button--text">Статус ремонта</span>
+        <div class="button button--checkstatus"></div>
+      </button>
+    </div>
+  </div>
+  <nav class="site-nav">
+    <ul class="site-nav-list">
+      <li><a class="site-nav__variation site-nav__variation--available">Ремонтируемые бренды</a></li>
+      <li><a class="site-nav__variation">Ремонтируемые устройства</a></li>
+      <li><a class="site-nav__variation">Цены на услуги</a></li>
+      <li><a class="site-nav__variation">Адреса сервисных центров</a></li>
+      <li><a class="site-nav__variation">Специальные цены</a></li>
+      <li><a class="site-nav__variation">Отзывы</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <div class="section-main">
+      <p class="section-main__text">
+        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+        отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br>
+        <br>
+        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+        количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+        очередь, советуют нас родным и близким.
+      </p>
+      <button class="section-main-button">
+        <div class="arrows"></div>
+        <span class="section-main__span">Читать далее</span>
+      </button>
+    </div>
+
+    <img class="section-main__image" src="img/img.png" alt="Фото из офиса CPS">
+
+  </section>
+</main>
+</body>
 </html>
