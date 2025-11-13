@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-white;
+  border-bottom: 1px solid #D9FFF5;
+  padding: 24px 16px 18px 16px;
+  position: sticky;
+  top:0;
+  z-index: 3;
+  @media (min-width: $width_pc) {
+    display: none;
+  }
+
+  &__divider {
+    width: 2px;
+    height: 32px;
+    background-color: $color-divider;
+    border-radius: 1px;
+
+    &--left {
+      display: none;
+      @media (min-width: $width_tablet) {
+        display: flex;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    &__logo{
+
+    }
+  }
+}

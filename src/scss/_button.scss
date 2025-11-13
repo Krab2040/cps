@@ -1,0 +1,111 @@
+.button {
+  width: 40px;
+  height: 40px;
+  transition: transform, 0.5s;
+  background: $color-pink;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &--transparent {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 2px solid $color-pink;
+    border-radius: 50%;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: $color-pink;
+
+      &::before {
+        content: "";
+        display: block;
+        border-right: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      margin: 12px 0 12px 10px;
+      width: 12px;
+      height: 12px;
+      transform: rotate(-45deg);
+      border-right: 2px solid $color-pink;
+      border-bottom: 2px solid $color-pink;
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  &--tablet {
+    display: none;
+    @media (min-width: $width_tablet) {
+      display: flex;
+    }
+  }
+}
+
+.button-burger {
+  background-image: url("../img/burger.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-repair {
+  background-image: url("../img/repair.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-checkstatus {
+  background-image: url("../img/check-status.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-call {
+  background-image: url("../img/call.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-chat {
+  background-image: url("../img/chat.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-profile {
+  background-image: url("../img/profile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-close {
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-search {
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.button-arrows {
+  content: url("../img/arrows.svg");
+  transition: 0.5s;
+}
+
+
+
+
+
