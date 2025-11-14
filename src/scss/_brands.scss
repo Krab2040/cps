@@ -1,0 +1,41 @@
+.brands {
+  transition: $main_transition;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    min-width: 240px;
+    max-width: 240px;
+    background-color: white;
+    border: 1px solid $color_lightgray;
+    border-radius: 6px;
+
+    &__button {
+      margin: 16px;
+    }
+    &--hidden {
+      width: 240px;
+    }
+    @media (min-width: $width_tablet) {
+      min-width: 208px;
+      max-width: 225px;
+      margin-top: 16px;
+    }
+  }
+
+  &.opened {
+    max-height: 360px;
+  }
+
+  @media (min-width: $width_tablet) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1080px;
+    max-height: 180px;
+  }
+}
+
+
+
+
+

@@ -1,4 +1,4 @@
 import '../scss/style.scss'
-import '../js/main.js'
+import './main.js'
 
 console.log('Works!')

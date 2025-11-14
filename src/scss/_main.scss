@@ -1,4 +1,7 @@
 body{
   background-color: $color-white-gray;
   font-family: "TT Lakes", serif;
+  @media (min-width: $width_pc) {
+    margin-left: 340px;
+  }
 }

@@ -1,0 +1,131 @@
+.burger-menu {
+  transition: 0.5s;
+  position: fixed;
+  height: 100%;
+  background-color: $color-white;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  padding: 24px 24px 0;
+  min-height: 100%;
+  top: -110%;
+  z-index: 4;
+
+  @media (min-width: $width_tablet) {
+    max-width: 340px;
+    z-index: 10;
+    top: 0;
+    left: -350px;
+  }
+
+  @media (min-width: $width_pc) {
+    max-width: 340px;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    display: flex;
+
+    #menu-close {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  &__left-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    padding-left: 17px;
+  }
+
+  &__list {
+    overflow: hidden;
+  }
+
+  &__item {
+    padding-top: 32px;
+  }
+
+  &__link {
+    transition: 0.5s;
+    vertical-align: bottom;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url('../img/highlight.svg'); // Замените на путь к вашему изображению
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 4px; // Подстройте ширину под изображение
+      height: 32px;
+      left: -4px;
+      transform: translateY(-8px);
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: $color-gray;
+
+      &::before {
+        left: 0px;
+
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts-list {
+    display: flex;
+  }
+
+  &__contacts-item {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__email {
+    margin-bottom: 12px;
+  }
+
+  &__number {
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__languages {
+    margin-bottom: 32px;
+    display: flex;
+  }
+
+  &__languages-item {
+    margin-right: 7px;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--active {
+      color: $color-gray;
+      transform: scale(1.1);
+      margin-right: 7px;
+    }
+  }
+}

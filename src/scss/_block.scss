@@ -1,0 +1,32 @@
+.block {
+  margin-top: 16px;
+  &__title {
+    background-image: linear-gradient(to right, #f8f8f8 0%, #ffffff 98.61%);
+    font-size: 20px;
+    font-weight: 300;
+    color: $color-gray;
+    padding: 16px 24px;
+  }
+  &__content {
+    margin-top: 16px;
+    @media(min-width: $width_tablet) {
+      margin: 24px ;
+    }
+  }
+  &__button {
+    margin-top: 16px;
+    display: none;
+    transition: 0.5s;
+    &:hover {
+      color: $color-gray;
+    }
+    @media(min-width: $width_tablet) {
+      margin-top: 24px;
+      margin-left: 16px;
+      display: flex;
+    }
+    &--text {
+      padding-left: 9px;
+    }
+  }
+}
